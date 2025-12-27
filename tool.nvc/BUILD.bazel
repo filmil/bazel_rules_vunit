@@ -1,0 +1,4 @@
+alias(
+    name = "vunit",
+    actual = "//third_party/vunit/tool.nvc:vunit",
+)
