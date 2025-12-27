@@ -1,4 +1,4 @@
-load("@bazel_rules_nvc//build/nvc:rules.bzl", "vhdl_library")
+load("@rules_nvc//build/nvc:rules.bzl", "vhdl_library")
 
 vhdl_library(
     name = "lib",
@@ -6,7 +6,7 @@ vhdl_library(
         "//:srcs",
     ],
     deps = [
-        "@bazel_rules_osvvm//tool.nvc:osvvm",
+        "@rules_osvvm//tool.nvc:osvvm",
         "@rules_vunit//tool.nvc:vunit_lib",
     ],
 )
