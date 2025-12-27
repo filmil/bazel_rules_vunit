@@ -1,5 +1,7 @@
 load("@bazel_rules_nvc//build/nvc:rules.bzl", "vhdl_library")
 
+package(default_visibility = ["//visibility:public"])
+
 vhdl_library(
     name = "vunit",
     # do not sort
