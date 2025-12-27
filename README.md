@@ -9,7 +9,7 @@ This repository provides Bazel rules for integrating the [VUnit](https://vunit.g
 ## Installation
 
 ```
-bazel_dep(name = "bazel_rules_vunit", version = "0.0.0")
+bazel_dep(name = "rules_vunit", version = "0.0.0")
 
 # Required to be able to build the underlying NVC tooling.
 bazel_dep(name = "toolchains_llvm", version = "1.5.0", dev_dependency = True)
