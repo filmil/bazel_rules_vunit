@@ -1,5 +1,5 @@
 {
-  "lockFileVersion": 24,
+  "lockFileVersion": 18,
   "registryFileHashes": {
     "https://bcr.bazel.build/bazel_registry.json": "8a28e4aff06ee60aed2a8c281907fb8bcbf3b753c91fb5a5c57da3215d5b3497",
     "https://bcr.bazel.build/modules/abseil-cpp/20210324.2/MODULE.bazel": "7cd0312e064fde87c8d1cd79ba06c876bd23630c83466e9500321be55c96ace2",
@@ -233,6 +233,8 @@
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_lib/3.0.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_nvc/0.5.2/MODULE.bazel": "fbed8168608ffa907342a653c1df57eb451007f6af439a0fb622ff5ae8a9570c",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_nvc/0.5.2/source.json": "b2785938308abbbabdf68e6326d06f36d58b8bcfde6303a930d97dfb3fc6324e",
+    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_osvvm/0.0.1/MODULE.bazel": "9dc23881d0a3901b46d7724ec8be0f213961fe13d5ff7e4129dc0c3a53d23a5f",
+    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_rules_osvvm/0.0.1/source.json": "407204472eb3bcefbebf8b4101d659d30d88e995aa170df956ef476070aef42b",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_skylib/1.0.3/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_skylib/1.1.1/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/bazel_skylib/1.2.0/MODULE.bazel": "not found",
@@ -383,7 +385,7 @@
   "moduleExtensions": {
     "@@buildifier_prebuilt+//:defs.bzl%buildifier_prebuilt_deps_extension": {
       "general": {
-        "bzlTransitiveDigest": "o1WPvgvSISMJsXVrFW1v+M17eIj9AJjkcTAucRVb3vI=",
+        "bzlTransitiveDigest": "izaEjT7NE6vV9H5axiYiPrvmFtCLNkfjhj+bpMolt1A=",
         "usagesDigest": "eWMDBEn8E8CrwAPXrlrjIap2pseSMhxDyDdrntHBOOE=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -522,7 +524,7 @@
     },
     "@@rules_kotlin+//src/main/starlark/core/repositories:bzlmod_setup.bzl%rules_kotlin_extensions": {
       "general": {
-        "bzlTransitiveDigest": "rL/34P1aFDq2GqVC2zCFgQ8nTuOC6ziogocpvG50Qz8=",
+        "bzlTransitiveDigest": "OlvsB0HsvxbR8ZN+J9Vf00X/+WVz/Y/5Xrq2LgcVfdo=",
         "usagesDigest": "QI2z8ZUR+mqtbwsf2fLqYdJAkPOHdOV+tF2yVAUgRzw=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -586,7 +588,7 @@
     },
     "@@toolchains_llvm+//toolchain/extensions:llvm.bzl%llvm": {
       "general": {
-        "bzlTransitiveDigest": "i54NfnK6i34XT5yyh16sxeFE2U1s0aiixBtMQYMdAMo=",
+        "bzlTransitiveDigest": "c91yAeoX1Jx16JQSsb7J/fY+/nWiCnOiMgjfjoXqbSQ=",
         "usagesDigest": "2RNice0kLWyb4bKKizN/psYMvGT/8zr3LVF7Bjso9J4=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -663,6 +665,5 @@
         ]
       }
     }
-  },
-  "facts": {}
+  }
 }
