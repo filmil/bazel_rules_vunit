@@ -9,7 +9,6 @@ This repository provides Bazel rules for integrating the [VUnit](https://vunit.g
 
 ## Installation
 
-(TODO)
 ```
 bazel_dep(name = "bazel_rules_vunit", version = "0.0.0")
 
