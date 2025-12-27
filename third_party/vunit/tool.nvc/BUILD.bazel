@@ -1,4 +1,4 @@
-load("@bazel_rules_nvc//build/nvc:rules.bzl", "vhdl_library")
+load("@rules_nvc//build/nvc:rules.bzl", "vhdl_library")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -11,7 +11,7 @@ vhdl_library(
         "@vunit//:path_srcs",
     ],
     deps = [
-        "@bazel_rules_osvvm//tool.nvc:osvvm", # Needs standard = "2019", ripple effect.
+        "@rules_osvvm//tool.nvc:osvvm", # Needs standard = "2019", ripple effect.
     ],
     standard = "2019",
 )
