@@ -2,6 +2,7 @@ package(default_visibility = ["//visibility:public"])
 
 filegroup(
     name = "srcs",
+    # Compilation is ordering-sensitive, do not change the ordering.
     # do not sort
     srcs = glob(["vunit/vhdl/string_ops/src/*.vhd"]) + [
         "vunit/vhdl/data_types/src/types.vhd",
@@ -25,34 +26,30 @@ filegroup(
         "vunit/vhdl/logging/src/log_handler_pkg.vhd",
         "vunit/vhdl/logging/src/print_pkg.vhd",
         "vunit/vhdl/logging/src/location_pkg.vhd",
-    ],
-)
-
-filegroup(
-    name = "logging_src_pkg",
-    # do not sort
-    srcs = [
+        "vunit/vhdl/data_types/src/string_ptr_pool_pkg.vhd",
+        "vunit/vhdl/data_types/src/byte_vector_ptr_pkg.vhd",
+        "vunit/vhdl/data_types/src/data_types_private_pkg.vhd",
+        "vunit/vhdl/data_types/src/integer_array_pkg.vhd",
+        "vunit/vhdl/data_types/src/queue_pkg.vhd",
+        "vunit/vhdl/data_types/src/dict_pkg.vhd",
+        "vunit/vhdl/data_types/src/dict_pkg-2008p.vhd",
         "vunit/vhdl/logging/src/logger_pkg.vhd",
-    ],
-)
-filegroup(
-    name = "logging_src_pkg_body",
-    # do not sort
-    srcs = [
+        "vunit/vhdl/data_types/src/string_ptr_pkg-body-2002p.vhd",
+        "vunit/vhdl/data_types/src/integer_array_pkg-body.vhd",
+        "vunit/vhdl/data_types/src/dict_pkg-body.vhd",
+        "vunit/vhdl/data_types/src/event_common_pkg.vhd",
+        "vunit/vhdl/data_types/src/event_private_pkg.vhd",
+        "vunit/vhdl/data_types/src/event_pkg.vhd",
+        "vunit/vhdl/data_types/src/queue_pkg-body.vhd",
+        "vunit/vhdl/data_types/src/queue_pkg-2008p.vhd",
+        "vunit/vhdl/data_types/src/queue_pool_pkg.vhd",
         "vunit/vhdl/logging/src/common_log_pkg-body.vhd",
-        "vunit/vhdl/logging/src/location_pkg-body-2008m.vhd",
-        #"vunit/vhdl/logging/src/location_pkg-body-2019p.vhd",
+        #"vunit/vhdl/logging/src/location_pkg-body-2008m.vhd", # for VHDL-2008 only.
+        "vunit/vhdl/logging/src/location_pkg-body-2019p.vhd",
         "vunit/vhdl/logging/src/log_handler_pkg-body.vhd",
         "vunit/vhdl/logging/src/log_levels_pkg-body.vhd",
         "vunit/vhdl/logging/src/logger_pkg-body.vhd",
         "vunit/vhdl/logging/src/print_pkg-body.vhd",
-    ],
-)
-
-filegroup(
-    name = "check_srcs",
-    # do not sort
-    srcs = [
         "vunit/vhdl/check/src/checker_pkg.vhd",
         "vunit/vhdl/check/src/check_api.vhd",
         "vunit/vhdl/check/src/check_api-2008p.vhd",
@@ -60,11 +57,6 @@ filegroup(
         "vunit/vhdl/check/src/check-2008p.vhd",
         "vunit/vhdl/check/src/checker_pkg-body.vhd",
     ],
-)
-
-filegroup(
-    name = "string_ops_srcs",
-    srcs = glob(["vunit/vhdl/string_ops/src/*.vhd"]),
 )
 
 filegroup(
@@ -76,36 +68,8 @@ filegroup(
 filegroup(
     name = "path_srcs",
     # do not sort
-    srcs = glob(["vunit/vhdl/path/src/*.vhd"]),
-)
-
-filegroup(
-    name = "data_types_srcs_pkg",
-    srcs = [
-        "vunit/vhdl/data_types/src/string_ptr_pool_pkg.vhd",
-        "vunit/vhdl/data_types/src/byte_vector_ptr_pkg.vhd",
-        #"vunit/vhdl/data_types/src/data_types_context.vhd",
-        "vunit/vhdl/data_types/src/data_types_private_pkg.vhd",
-        "vunit/vhdl/data_types/src/integer_array_pkg.vhd",
-        "vunit/vhdl/data_types/src/queue_pkg.vhd",
-        "vunit/vhdl/data_types/src/dict_pkg.vhd",
-        "vunit/vhdl/data_types/src/dict_pkg-2008p.vhd",
-    ],
-)
-
-filegroup(
-    name = "data_types_srcs",
-    # do not sort
-    srcs = [
-        "vunit/vhdl/data_types/src/string_ptr_pkg-body-2002p.vhd",
-        "vunit/vhdl/data_types/src/integer_array_pkg-body.vhd",
-        "vunit/vhdl/data_types/src/dict_pkg-body.vhd",
-        "vunit/vhdl/data_types/src/event_common_pkg.vhd",
-        "vunit/vhdl/data_types/src/event_private_pkg.vhd",
-        "vunit/vhdl/data_types/src/event_pkg.vhd",
-        "vunit/vhdl/data_types/src/queue_pkg-body.vhd",
-        "vunit/vhdl/data_types/src/queue_pkg-2008p.vhd",
-        "vunit/vhdl/data_types/src/queue_pool_pkg.vhd",
+    srcs = glob(["vunit/vhdl/path/src/*.vhd"]) + [
+        "vunit/vhdl/data_types/src/data_types_context.vhd",
     ],
 )
 

@@ -3,15 +3,10 @@ load("@bazel_rules_nvc//build/nvc:rules.bzl", "vhdl_library")
 package(default_visibility = ["//visibility:public"])
 
 vhdl_library(
-    name = "vunit",
+    name = "vunit_lib",
     # do not sort
     srcs = [
         "@vunit//:srcs",
-        "@vunit//:data_types_srcs_pkg",
-        "@vunit//:logging_src_pkg",
-        "@vunit//:data_types_srcs",
-        "@vunit//:logging_src_pkg_body",
-        "@vunit//:check_srcs",
         "@vunit//:random_srcs", # Needs osvvm library.
         "@vunit//:path_srcs",
     ],
