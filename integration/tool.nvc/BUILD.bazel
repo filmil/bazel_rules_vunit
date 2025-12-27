@@ -7,6 +7,6 @@ vhdl_library(
     ],
     deps = [
         "@bazel_rules_osvvm//tool.nvc:osvvm",
-        "@bazel_rules_vunit//tool.nvc:vunit",
+        "@bazel_rules_vunit//tool.nvc:vunit_lib",
     ],
 )

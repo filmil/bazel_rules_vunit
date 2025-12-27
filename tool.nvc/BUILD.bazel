@@ -1,6 +1,6 @@
 package(default_visibility = ["//visibility:public"])
 
 alias(
-    name = "vunit",
-    actual = "//third_party/vunit/tool.nvc:vunit",
+    name = "vunit_lib",
+    actual = "//third_party/vunit/tool.nvc:vunit_lib",
 )

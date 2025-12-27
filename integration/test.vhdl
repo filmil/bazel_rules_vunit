@@ -1,4 +1,4 @@
-library vunit;
+library vunit_lib;
 
 entity tb is
 end entity;
