@@ -28,5 +28,7 @@ jobs:
           submodules: 'true'
       - name: Build everything
         run: "bazel build //..."
+      - name: Test everything
+        run: "bazel test //..."
       - name: Integration build
         run: "cd integration && bazel build //..."
