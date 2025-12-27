@@ -2,7 +2,6 @@
 
 [![Build Status](https://github.com/filmil/bazel_rules_vunit/actions/workflows/build.yml/badge.svg)](https://github.com/filmil/bazel_rules_vunit/actions/workflows/build.yml)
 [![Publish BCR Status](https://github.com/filmil/bazel_rules_vunit/actions/workflows/publish-bcr.yml/badge.svg)](https://github.com/filmil/bazel_rules_vunit/actions/workflows/publish-bcr.yml)
-[![Publish Status](https://github.com/filmil/bazel_rules_vunit/actions/workflows/publish.yml/badge.svg)](https://github.com/filmil/bazel_rules_vunit/actions/workflows/publish.yml)
 [![Tag and Release Status](https://github.com/filmil/bazel_rules_vunit/actions/workflows/tag-and-release.yml/badge.svg)](https://github.com/filmil/bazel_rules_vunit/actions/workflows/tag-and-release.yml)
 
 This repository provides Bazel rules for integrating the [VUnit](https://vunit.github.io/) VHDL testing framework into your Bazel projects.
