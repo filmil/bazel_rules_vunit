@@ -13,6 +13,7 @@ filegroup(
         "vunit/vhdl/data_types/src/codec.vhd",
         "vunit/vhdl/data_types/src/codec-2008p.vhd",
         "vunit/vhdl/data_types/src/integer_vector_ptr_pkg.vhd",
+        "vunit/vhdl/data_types/src/integer_vector_ptr_pkg-body-2002p.vhd",
         "vunit/vhdl/data_types/src/integer_vector_ptr_pool_pkg.vhd",
         "vunit/vhdl/data_types/src/api/external_string_pkg.vhd",
         "vunit/vhdl/data_types/src/string_ptr_pkg.vhd",
