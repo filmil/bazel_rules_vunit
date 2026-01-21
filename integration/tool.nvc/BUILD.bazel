@@ -9,4 +9,5 @@ vhdl_library(
         "@rules_osvvm//tool.nvc:osvvm",
         "@rules_vunit//tool.nvc:vunit_lib",
     ],
+    standard = "2019",
 )
