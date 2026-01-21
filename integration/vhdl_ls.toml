@@ -1,4 +1,4 @@
-
+standard = "2019"
 [libraries]
 lib.files = [
   "test.vhdl"
@@ -12,6 +12,7 @@ vunit_lib.files = [
   "third_party/vunit/src/vunit/vhdl/data_types/src/codec.vhd",
   "third_party/vunit/src/vunit/vhdl/data_types/src/codec-2008p.vhd",
   "third_party/vunit/src/vunit/vhdl/data_types/src/integer_vector_ptr_pkg.vhd",
+  "third_party/vunit/src/vunit/vhdl/data_types/src/integer_vector_ptr_pkg-body-2002p.vhd",
   "third_party/vunit/src/vunit/vhdl/data_types/src/integer_vector_ptr_pool_pkg.vhd",
   "third_party/vunit/src/vunit/vhdl/data_types/src/api/external_string_pkg.vhd",
   "third_party/vunit/src/vunit/vhdl/data_types/src/string_ptr_pkg.vhd",

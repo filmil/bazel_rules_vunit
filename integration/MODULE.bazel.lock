@@ -342,8 +342,6 @@
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_license/0.0.7/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_license/1.0.0/MODULE.bazel": "not found",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_multitool/1.9.0/MODULE.bazel": "not found",
-    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_nvc/1.0.0/MODULE.bazel": "5948f9a44ef7b1559361b67d8ed56ff344397386eda1c7145f6b87528c2ded35",
-    "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_nvc/1.0.0/source.json": "618422e34df017df00a2f049c8808f6c79802c8b5787f582e1181d205f348c6f",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_osvvm/1.1.0/MODULE.bazel": "a6cf2d1a8e551974aa22653b4be5ed553424fa1af45305606fa41990f9aa154c",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_osvvm/1.1.0/source.json": "305f3315b87d96256ab72b4e29d55a1ebe1c954ebdf1246428dafc63645f02fe",
     "https://raw.githubusercontent.com/filmil/bazel-registry/main/modules/rules_pkg/0.7.0/MODULE.bazel": "not found",
