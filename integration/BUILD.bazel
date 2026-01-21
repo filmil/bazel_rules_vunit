@@ -21,5 +21,7 @@ filegroup(
     tags = [
         "vhdl_ls",
         "vhdl_ls_lib_vunit_lib",
+        "vhdl_ls_rem_external/+_repo_rules+vunit/vunit",
+        "vhdl_ls_add_third_party/vunit/src/vunit",
     ],
 )
