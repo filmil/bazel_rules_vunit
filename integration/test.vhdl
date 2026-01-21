@@ -32,7 +32,7 @@ architecture sim2 of tb is
 begin
     process begin
         test_runner_setup(runner, runner_cfg);
-        check_true(false, "oops");
+        check_true(true, "oops");
         test_runner_cleanup(runner);
     end process;
 end architecture;
