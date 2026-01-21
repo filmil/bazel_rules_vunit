@@ -9,7 +9,7 @@ vhdl_test(
         "@rules_osvvm//tool.nvc:osvvm",
         "@rules_vunit//tool.nvc:vunit_lib",
     ],
-    entities = [ "tb"],
+    entities = [ "tb", "tb_cfg_default"],
     standard = "2019",
 )
 
