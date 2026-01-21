@@ -4,5 +4,20 @@ filegroup(
     name = "srcs",
     srcs = [
         "test.vhdl",
-    ]
+    ],
+    tags = [
+        "vhdl_ls",
+        "vhdl_ls_lib_lib",
+    ],
+)
+
+filegroup(
+    name = "vunit_srcs",
+    srcs = [
+        "@rules_vunit//third_party/vunit:srcs",
+    ],
+    tags = [
+        "vhdl_ls",
+        "vhdl_ls_lib_vunit_lib",
+    ],
 )

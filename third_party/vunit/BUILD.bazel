@@ -1,0 +1,10 @@
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "srcs",
+    srcs = [
+        "@vunit//:srcs",
+        "@vunit//:random_srcs",
+        "@vunit//:path_srcs",
+    ],
+)
