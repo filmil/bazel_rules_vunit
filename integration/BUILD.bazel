@@ -14,14 +14,12 @@ filegroup(
 filegroup(
     name = "vunit_srcs",
     srcs = [
-        "@vunit//:srcs",
-        "@vunit//:random_srcs",
-        "@vunit//:path_srcs",
+        "@rules_vunit//third_party/vunit:srcs",
     ],
     tags = [
         "vhdl_ls",
         "vhdl_ls_lib_vunit_lib",
-        "vhdl_ls_rem_external/+_repo_rules+vunit/vunit",
+        "vhdl_ls_rem_external/rules_vunit++_repo_rules+vunit/vunit",
         "vhdl_ls_add_third_party/vunit/src/vunit",
     ],
 )

@@ -1,6 +1,6 @@
-load("@rules_nvc//build/nvc:rules.bzl", "vhdl_library")
+load("@rules_nvc//build/nvc:rules.bzl", "vhdl_test")
 
-vhdl_library(
+vhdl_test(
     name = "lib",
     srcs = [
         "//:srcs",
@@ -9,5 +9,7 @@ vhdl_library(
         "@rules_osvvm//tool.nvc:osvvm",
         "@rules_vunit//tool.nvc:vunit_lib",
     ],
+    entities = [ "tb"],
     standard = "2019",
 )
+
