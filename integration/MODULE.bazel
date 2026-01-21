@@ -20,11 +20,3 @@ use_repo(llvm, "llvm_toolchain")
 register_toolchains("@llvm_toolchain//:all", dev_dependency = True)
 
 
-git_repository = use_repo_rule("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
-git_repository(
-    name = "vunit",
-    build_file = "//third_party/vunit:vunit.BUILD.bazel",
-    commit = "4e30fa124ea84609af0f957dbc55b82adaed1d76",
-    remote = "https://github.com/VUnit/vunit",
-)
-

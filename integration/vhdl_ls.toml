@@ -55,7 +55,14 @@ vunit_lib.files = [
   "third_party/vunit/src/vunit/vhdl/check/src/check.vhd",
   "third_party/vunit/src/vunit/vhdl/check/src/check-2008p.vhd",
   "third_party/vunit/src/vunit/vhdl/check/src/checker_pkg-body.vhd",
+  "third_party/vunit/src/vunit/vhdl/dictionary/src/dictionary.vhd",
   "third_party/vunit/src/vunit/vhdl/random/src/random_pkg.vhd",
   "third_party/vunit/src/vunit/vhdl/path/src/path.vhd",
-  "third_party/vunit/src/vunit/vhdl/data_types/src/data_types_context.vhd"
+  "third_party/vunit/src/vunit/vhdl/data_types/src/data_types_context.vhd",
+  "third_party/vunit/src/vunit/vhdl/run/src/run_types.vhd",
+  "third_party/vunit/src/vunit/vhdl/run/src/runner_pkg.vhd",
+  "third_party/vunit/src/vunit/vhdl/run/src/run_api.vhd",
+  "third_party/vunit/src/vunit/vhdl/run/src/run.vhd",
+  "third_party/vunit/src/vunit/vhdl/vunit_context.vhd",
+  "third_party/vunit/src/vunit/vhdl/vunit_run_context.vhd"
 ]
