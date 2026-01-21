@@ -4,8 +4,7 @@ filegroup(
     name = "srcs",
     # Compilation is ordering-sensitive, do not change the ordering.
     # do not sort
-    srcs = glob(["vunit/vhdl/string_ops/src/*.vhd"]) +
-    [
+    srcs = glob(["vunit/vhdl/string_ops/src/*.vhd"]) + [
         "vunit/vhdl/data_types/src/types.vhd",
         "vunit/vhdl/data_types/src/api/external_integer_vector_pkg.vhd",
         "vunit/vhdl/data_types/src/codec_builder.vhd",
@@ -57,7 +56,8 @@ filegroup(
         "vunit/vhdl/check/src/check.vhd",
         "vunit/vhdl/check/src/check-2008p.vhd",
         "vunit/vhdl/check/src/checker_pkg-body.vhd",
-        "vunit/vhdl/dictionary/src/dictionary.vhd",
+        ":random_srcs",
+        ":path_srcs",
     ],
 )
 
@@ -72,12 +72,6 @@ filegroup(
     # do not sort
     srcs = glob(["vunit/vhdl/path/src/*.vhd"]) + [
         "vunit/vhdl/data_types/src/data_types_context.vhd",
-        "vunit/vhdl/run/src/run_types.vhd",
-        "vunit/vhdl/run/src/runner_pkg.vhd",
-        "vunit/vhdl/run/src/run_api.vhd",
-        "vunit/vhdl/run/src/run.vhd",
-        "vunit/vhdl/vunit_context.vhd",
-        "vunit/vhdl/vunit_run_context.vhd",
     ],
 )
 

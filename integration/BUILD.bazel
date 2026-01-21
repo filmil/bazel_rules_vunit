@@ -14,7 +14,9 @@ filegroup(
 filegroup(
     name = "vunit_srcs",
     srcs = [
-        "@rules_vunit//third_party/vunit:srcs",
+        "@vunit//:srcs",
+        "@vunit//:random_srcs",
+        "@vunit//:path_srcs",
     ],
     tags = [
         "vhdl_ls",

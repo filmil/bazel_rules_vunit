@@ -1,4 +1,5 @@
 library vunit_lib;
+context vunit_lib.vunit_context;
 
 entity tb is
 end entity;
