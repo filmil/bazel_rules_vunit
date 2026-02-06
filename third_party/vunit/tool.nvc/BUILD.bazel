@@ -6,9 +6,7 @@ vhdl_library(
     name = "vunit_lib",
     # do not sort
     srcs = [
-        "@vunit//:srcs",
-        "@vunit//:random_srcs", # Needs osvvm library.
-        "@vunit//:path_srcs",
+        "//third_party/vunit:srcs",
     ],
     deps = [
         "@rules_osvvm//tool.nvc:osvvm", # Needs standard = "2019", ripple effect.
