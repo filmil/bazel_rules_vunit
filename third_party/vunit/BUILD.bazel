@@ -7,5 +7,7 @@ filegroup(
         "@vunit//:srcs",
         "@vunit//:random_srcs",
         "@vunit//:path_srcs",
+        "@vunit//:com_srcs",
+        "@vunit//:verification_components_srcs",
     ],
 )
