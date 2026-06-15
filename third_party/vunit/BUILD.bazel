@@ -5,9 +5,22 @@ filegroup(
     # do not sort
     srcs = [
         "@vunit//:srcs",
-        "@vunit//:random_srcs",
         "@vunit//:path_srcs",
-        "@vunit//:com_srcs",
-        "@vunit//:verification_components_srcs",
-    ],
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "@rules_vunit//:vhdl_2008": [
+            "@vunit//:com_srcs",
+        ],
+        "@rules_vunit//:vhdl_2019": [
+            "@vunit//:com_srcs",
+            "@vunit//:random_srcs",
+            "@vunit//:verification_components_srcs",
+        ],
+        "//conditions:default": [
+            "@vunit//:com_srcs",
+            "@vunit//:random_srcs",
+            "@vunit//:verification_components_srcs",
+        ],
+    }),
 )
