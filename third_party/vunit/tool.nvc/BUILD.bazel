@@ -8,8 +8,17 @@ vhdl_library(
     srcs = [
         "//third_party/vunit:srcs",
     ],
-    deps = [
-        "@rules_osvvm//tool.nvc:osvvm", # Needs standard = "2019", ripple effect.
-    ],
-    standard = "2019",
+    deps = select({
+        "@rules_vunit//:vhdl_2019": [
+            "@rules_osvvm//tool.nvc:osvvm",
+        ],
+        "//conditions:default": [],
+    }),
+    standard = select({
+        "@rules_vunit//:vhdl_1993": "1993",
+        "@rules_vunit//:vhdl_2002": "2002",
+        "@rules_vunit//:vhdl_2008": "2008",
+        "@rules_vunit//:vhdl_2019": "2019",
+        "//conditions:default": "2019",
+    }),
 )

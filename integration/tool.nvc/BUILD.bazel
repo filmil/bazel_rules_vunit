@@ -6,10 +6,22 @@ vhdl_test(
         "//:srcs",
     ],
     deps = [
-        "@rules_osvvm//tool.nvc:osvvm",
         "@rules_vunit//tool.nvc:vunit_lib",
+    ] + select({
+        "@rules_vunit//:vhdl_2019": [
+            "@rules_osvvm//tool.nvc:osvvm",
+        ],
+        "//conditions:default": [],
+    }),
+    entities = [
+        "tb",
+        "tb_cfg_default",
     ],
-    entities = [ "tb", "tb_cfg_default"],
-    standard = "2019",
+    standard = select({
+        "@rules_vunit//:vhdl_1993": "1993",
+        "@rules_vunit//:vhdl_2002": "2002",
+        "@rules_vunit//:vhdl_2008": "2008",
+        "@rules_vunit//:vhdl_2019": "2019",
+        "//conditions:default": "2019",
+    }),
 )
-

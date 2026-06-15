@@ -9,16 +9,45 @@ filegroup(
         "vunit/vhdl/data_types/src/types.vhd",
         "vunit/vhdl/data_types/src/api/external_integer_vector_pkg.vhd",
         "vunit/vhdl/data_types/src/codec_builder.vhd",
-        "vunit/vhdl/data_types/src/codec_builder-2008p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/data_types/src/codec_builder-2008p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/data_types/src/codec.vhd",
-        "vunit/vhdl/data_types/src/codec-2008p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/data_types/src/codec-2008p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/data_types/src/integer_vector_ptr_pkg.vhd",
-        "vunit/vhdl/data_types/src/integer_vector_ptr_pkg-body-2002p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [
+            "vunit/vhdl/data_types/src/integer_vector_ptr_pkg-body-93.vhd",
+        ],
+        "//conditions:default": [
+            "vunit/vhdl/data_types/src/integer_vector_ptr_pkg-body-2002p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/data_types/src/integer_vector_ptr_pool_pkg.vhd",
         "vunit/vhdl/data_types/src/api/external_string_pkg.vhd",
         "vunit/vhdl/data_types/src/string_ptr_pkg.vhd",
         "vunit/vhdl/core/src/stop_pkg.vhd",
-        "vunit/vhdl/core/src/stop_body_2008p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [
+            "vunit/vhdl/core/src/stop_body_93-2002.vhd",
+        ],
+        "@rules_vunit//:vhdl_2002": [
+            "vunit/vhdl/core/src/stop_body_93-2002.vhd",
+        ],
+        "//conditions:default": [
+            "vunit/vhdl/core/src/stop_body_2008p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/core/src/core_pkg.vhd",
         "vunit/vhdl/data_types/src/id_pkg.vhd",
         "vunit/vhdl/logging/src/ansi_pkg.vhd",
@@ -34,29 +63,66 @@ filegroup(
         "vunit/vhdl/data_types/src/integer_array_pkg.vhd",
         "vunit/vhdl/data_types/src/queue_pkg.vhd",
         "vunit/vhdl/data_types/src/dict_pkg.vhd",
-        "vunit/vhdl/data_types/src/dict_pkg-2008p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/data_types/src/dict_pkg-2008p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/logging/src/logger_pkg.vhd",
-        "vunit/vhdl/data_types/src/string_ptr_pkg-body-2002p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [
+            "vunit/vhdl/data_types/src/string_ptr_pkg-body-93.vhd",
+        ],
+        "//conditions:default": [
+            "vunit/vhdl/data_types/src/string_ptr_pkg-body-2002p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/data_types/src/integer_array_pkg-body.vhd",
         "vunit/vhdl/data_types/src/dict_pkg-body.vhd",
         "vunit/vhdl/data_types/src/event_common_pkg.vhd",
         "vunit/vhdl/data_types/src/event_private_pkg.vhd",
         "vunit/vhdl/data_types/src/event_pkg.vhd",
         "vunit/vhdl/data_types/src/queue_pkg-body.vhd",
-        "vunit/vhdl/data_types/src/queue_pkg-2008p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/data_types/src/queue_pkg-2008p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/data_types/src/queue_pool_pkg.vhd",
         "vunit/vhdl/logging/src/common_log_pkg-body.vhd",
-        #"vunit/vhdl/logging/src/location_pkg-body-2008m.vhd", # for VHDL-2008 only.
-        "vunit/vhdl/logging/src/location_pkg-body-2019p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_2019": [
+            "vunit/vhdl/logging/src/location_pkg-body-2019p.vhd",
+        ],
+        "//conditions:default": [
+            "vunit/vhdl/logging/src/location_pkg-body-2008m.vhd",
+        ],
+    }) + [
         "vunit/vhdl/logging/src/log_handler_pkg-body.vhd",
         "vunit/vhdl/logging/src/log_levels_pkg-body.vhd",
         "vunit/vhdl/logging/src/logger_pkg-body.vhd",
         "vunit/vhdl/logging/src/print_pkg-body.vhd",
         "vunit/vhdl/check/src/checker_pkg.vhd",
         "vunit/vhdl/check/src/check_api.vhd",
-        "vunit/vhdl/check/src/check_api-2008p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/check/src/check_api-2008p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/check/src/check.vhd",
-        "vunit/vhdl/check/src/check-2008p.vhd",
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/check/src/check-2008p.vhd",
+        ],
+    }) + [
         "vunit/vhdl/check/src/checker_pkg-body.vhd",
         "vunit/vhdl/dictionary/src/dictionary.vhd",
     ],
@@ -72,14 +138,19 @@ filegroup(
     name = "path_srcs",
     # do not sort
     srcs = glob(["vunit/vhdl/path/src/*.vhd"]) + [
-        "vunit/vhdl/data_types/src/data_types_context.vhd",
         "vunit/vhdl/run/src/run_types.vhd",
         "vunit/vhdl/run/src/runner_pkg.vhd",
         "vunit/vhdl/run/src/run_api.vhd",
         "vunit/vhdl/run/src/run.vhd",
-        "vunit/vhdl/vunit_context.vhd",
-        "vunit/vhdl/vunit_run_context.vhd",
-    ],
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/data_types/src/data_types_context.vhd",
+            "vunit/vhdl/vunit_context.vhd",
+            "vunit/vhdl/vunit_run_context.vhd",
+        ],
+    }),
 )
 
 filegroup(
@@ -95,10 +166,14 @@ filegroup(
         "vunit/vhdl/com/src/com_debug_codec_builder.vhd",
         "vunit/vhdl/com/src/com_deprecated.vhd",
         "vunit/vhdl/com/src/com_string.vhd",
-        "vunit/vhdl/com/src/com_context.vhd",
-    ],
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/com/src/com_context.vhd",
+        ],
+    }),
 )
-
 
 filegroup(
     name = "verification_components_srcs",
@@ -148,6 +223,11 @@ filegroup(
         "vunit/vhdl/verification_components/src/wishbone_master.vhd",
         "vunit/vhdl/verification_components/src/wishbone_pkg.vhd",
         "vunit/vhdl/verification_components/src/wishbone_slave.vhd",
-        "vunit/vhdl/verification_components/src/vc_context.vhd",
-    ],
+    ] + select({
+        "@rules_vunit//:vhdl_1993": [],
+        "@rules_vunit//:vhdl_2002": [],
+        "//conditions:default": [
+            "vunit/vhdl/verification_components/src/vc_context.vhd",
+        ],
+    }),
 )

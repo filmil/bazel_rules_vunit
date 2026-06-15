@@ -2,9 +2,17 @@ package(default_visibility = ["//visibility:public"])
 
 filegroup(
     name = "srcs",
-    srcs = [
-        "test.vhdl",
-    ],
+    srcs = select({
+        "@rules_vunit//:vhdl_1993": [
+            "test_93_2002.vhdl",
+        ],
+        "@rules_vunit//:vhdl_2002": [
+            "test_93_2002.vhdl",
+        ],
+        "//conditions:default": [
+            "test.vhdl",
+        ],
+    }),
     tags = [
         "vhdl_ls",
         "vhdl_ls_lib_lib",
