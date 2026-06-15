@@ -2,5 +2,7 @@
 common --registry=https://raw.githubusercontent.com/filmil/bazel-registry/main
 common --registry=https://bcr.bazel.build
 
-try-import %workspace%/user.bazelrc
+# Bazel 9 compatibility flags
+common --incompatible_autoload_externally=+@rules_cc
 
+try-import %workspace%/user.bazelrc
